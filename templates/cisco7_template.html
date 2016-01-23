@@ -1,0 +1,16 @@
+<html>
+<title>Cisco 7 Decoder</title>
+<body>
+<h3> Decode Cisco 7 Encoded String</h3>
+<form action="/cisco7" method="POST">
+    <p>Enter encoded string: </p>
+    <input type="text" name="coded_string">
+    <input type="submit" value="Decode">
+    <br/>
+    {% if decoded_string != None %}
+    <p>Decoded string: {{ decoded_string }}</p>
+    {% end %}
+</form>
+<a href="/">Menu</a>
+</body>
+</html>
