@@ -1,0 +1,24 @@
+<html>
+<title>Cisco Device Status</title>
+<body>
+<h3>Cisco Device Status </h3>
+<form action="/ciscostatus" method="POST">
+    <p>Enter device name: </p>
+    <input type="text" name="device_hostname">
+    <input type="submit" value="Stat!">
+    <br/>
+    {% if show_version_output != None %}
+    <p>
+        Device info:
+        <br />
+        Hostname: {{ re_device_hostname }} <br />
+        Model: {{ re_device_model }} <br />
+        Version: {{ re_device_version }} <br />
+        Serial: {{ re_device_serial }} <br />
+
+    </p>
+    {% end %}
+</form>
+<a href="/">Menu</a>
+</body>
+</html>
