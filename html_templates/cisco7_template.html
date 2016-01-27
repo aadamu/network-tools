@@ -1,16 +1,32 @@
-<html>
-<title>Cisco 7 Decoder</title>
-<body>
-<h3> Decode Cisco 7 Encoded String</h3>
-<form action="/cisco7" method="POST">
-    <p>Enter encoded string: </p>
-    <input type="text" name="coded_string">
-    <input type="submit" value="Decode">
-    <br/>
-    {% if decoded_string != None %}
-    <p>Decoded string: {{ decoded_string }}</p>
-    {% end %}
-</form>
-<a href="/">Menu</a>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    {% raw html_head %}
+
+  <body>
+
+       {% raw html_nav %}
+
+    <div class="container">
+
+      <div class="starter-template">
+          <h3> Decode Cisco 7 Encoded String</h3>
+          <br/>
+            <form action="/cisco7" method="POST">
+                <p>Enter encoded string: </p>
+                <input type="text" name="coded_string">
+                <input type="submit" value="Decode">
+            <br/>
+
+        {% if decoded_string != None %}
+                <br />
+                <p>Decoded string: {{ decoded_string }}</p>
+        {% end %}
+            </form>
+          <br />
+      </div>
+
+    </div><!-- /.container -->
+    {% raw html_bootstrap %}
+  </body>
+
 </html>
